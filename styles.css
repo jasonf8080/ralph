@@ -471,6 +471,7 @@ a{
     .project-item img{
         order: -1;
         border-radius: 14px 14px 0 0;
+        max-width: 100%;
     }
 
     .project-item-content a{
