@@ -21,6 +21,9 @@ prevBtn.addEventListener('click', prevImage);
 
 async function setupUI(){
     try{
+        sliderContainer.innerHTML = `<div class="loader">
+        <i class="fa-solid fa-spinner"></i>
+    </div>`;
         await setupImage();
         await setupText();
 
