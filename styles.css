@@ -551,9 +551,7 @@ a{
 }
 
 @media(max-width: 600px){
-    .projects-section{
-        max-width: 90%;
-    }
+   
 
     .project-item-content{
         padding: 40px;
