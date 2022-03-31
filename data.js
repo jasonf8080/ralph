@@ -18,7 +18,7 @@ export const cases = [
     },
     
     {
-        title:'Card UI', 
+        title:'Renntals', 
         desc: 'Contractor and Company Service App Concept',
         img: 'case4.png'
     },
@@ -30,7 +30,7 @@ export const cases = [
     },
     
     {
-        title:'Renntals', 
+        title:'RoundR', 
         desc: 'Contractor and Company Service App Concept',
         img: 'case6.png'
     }

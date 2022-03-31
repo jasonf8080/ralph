@@ -1,10 +1,13 @@
 import {cases} from "./data.js";
-
+//ELEMENTS
 const nextBtn = document.querySelector('.fas.fa-chevron-right');
 const prevBtn = document.querySelector('.fas.fa-chevron-left');
 const sliderContainer = document.querySelector('.slider-container');
 let counter = JSON.parse(localStorage.getItem('overlayIndex'));
+const caseNameElement = document.querySelector('.case-name');
 
+
+//EVENT LISTENERS
 window.addEventListener('DOMContentLoaded', () =>{
     setupImage();
 })
@@ -12,8 +15,12 @@ window.addEventListener('DOMContentLoaded', () =>{
 nextBtn.addEventListener('click', nextImage);
 prevBtn.addEventListener('click', prevImage);
 
+
+
+//FUNCTIONS
 function setupImage(){
     sliderContainer.innerHTML = `<img src="case${counter}.png" alt="" class="slider-img">`;
+    caseNameElement.textContent = cases[counter - 1].title;
 }
 
 function nextImage(){
@@ -29,6 +36,7 @@ function nextImage(){
 
 function prevImage(){
     counter--;
+
     if(counter < 1){
         counter = cases.length;
     }

@@ -1,27 +1,26 @@
 import {cases} from "./data.js";
 import {softwares} from "./data.js";
 
+//ELEMENTS
 const caseDisplaySection = document.querySelector('.case-display-section');
 const sofwareDisplaySection = document.querySelector('.programs-section-grid');
+const menuBtn = document.querySelector('.toggle-button');
+const menu = document.querySelector('.links');
+const bars = [...document.querySelectorAll('.bar')];
 
-const menuIcon = document.querySelector('.menu');
-const bars = document.querySelectorAll('.bar');
-console.log(bars);
+//const bars = document.querySelectorAll('.bar');
 
-menuIcon.addEventListener('click', () => {
-    bars[1].style.transition = `all 0.1s`;
-    menuIcon.classList.toggle('active');
-    if(menuIcon.classList.contains('active')){
-        bars[0].style.transform = 'rotate(45deg) translateY(11px)';
-        bars[1].style.visibility = 'hidden';
-        bars[2].style.transform = 'rotate(-45deg) translateY(-11px)';
-    } else {
-        bars[0].style.transform = 'rotate(0deg)';
-        bars[1].style.visibility = 'visible';
-        bars[2].style.transform = 'rotate(0deg)';
-    }
+//EVENT LISTENERS
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+
+    bars.forEach((bar) => {
+        bar.classList.toggle('change');
+    })
 })
 
+
+//FUNCTIONS
 function updateCases(){
 
     let caseLinks = cases.map(function(link){
@@ -56,7 +55,7 @@ updateSoftware();
 const overlays = document.querySelectorAll('.overlay');
 
 overlays.forEach((overlay, index) => {
-    overlay.addEventListener('click', function(){
+    overlay.addEventListener('click', function(e){
         let overlayIndex = index + 1; 
         localStorage.setItem('overlayIndex', JSON.stringify(overlayIndex));
     })
