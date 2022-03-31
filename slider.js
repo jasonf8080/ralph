@@ -19,30 +19,14 @@ prevBtn.addEventListener('click', prevImage);
 
 //FUNCTIONS
 
-async function setupUI(){
-    try{
-        sliderContainer.innerHTML = `<div class="loader">
-        <i class="fa-solid fa-spinner"></i>
-    </div>`;
-        await setupImage();
-        await setupText();
-
-    } catch(error) {
-        console.log(error)
-    }
+ function setupUI(){
+    sliderContainer.innerHTML = `<img src="case${counter}.png" alt="" class="slider-img">`;
+    caseNameElement.textContent = cases[counter - 1].title;
 } 
    
    
 
 
-function setupImage(){
-    sliderContainer.innerHTML = `<img src="case${counter}.png" alt="" class="slider-img">`;
-   
-}
-
-function setupText(){
-    caseNameElement.textContent = cases[counter - 1].title
-}
 
 
 function nextImage(){
