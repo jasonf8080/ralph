@@ -19,8 +19,9 @@ prevBtn.addEventListener('click', prevImage);
 
 //FUNCTIONS
 function setupImage(){
-    sliderContainer.innerHTML = `<img src="case${counter}.png" alt="" class="slider-img">`;
     caseNameElement.textContent = cases[counter - 1].title;
+    sliderContainer.innerHTML = `<img src="case${counter}.png" alt="" class="slider-img">`;
+   
 }
 
 function nextImage(){
