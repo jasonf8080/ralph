@@ -9,7 +9,7 @@ const caseNameElement = document.querySelector('.case-name');
 
 //EVENT LISTENERS
 window.addEventListener('DOMContentLoaded', () =>{
-    setupImage();
+    setupUI();
 })
 
 nextBtn.addEventListener('click', nextImage);
@@ -18,11 +18,29 @@ prevBtn.addEventListener('click', prevImage);
 
 
 //FUNCTIONS
+
+async function setupUI(){
+    try{
+        await setupImage();
+        await setupText();
+
+    } catch(error) {
+        console.log(error)
+    }
+} 
+   
+   
+
+
 function setupImage(){
-    caseNameElement.textContent = cases[counter - 1].title;
     sliderContainer.innerHTML = `<img src="case${counter}.png" alt="" class="slider-img">`;
    
 }
+
+function setupText(){
+    caseNameElement.textContent = cases[counter - 1].title
+}
+
 
 function nextImage(){
     counter++;
@@ -30,9 +48,9 @@ function nextImage(){
     if(counter > cases.length){
         counter = 1;
     }
+
+    setupUI();
     localStorage.setItem('overlayIndex', counter);
-    setupImage();
-   
 }
 
 
@@ -42,6 +60,6 @@ function prevImage(){
     if(counter < 1){
         counter = cases.length;
     }
-    setupImage();
+    setupUI();
     localStorage.setItem('overlayIndex', counter);
 }
