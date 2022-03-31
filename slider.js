@@ -29,8 +29,9 @@ function nextImage(){
     if(counter > cases.length){
         counter = 1;
     }
-    setupImage();
     localStorage.setItem('overlayIndex', counter);
+    setupImage();
+   
 }
 
 
