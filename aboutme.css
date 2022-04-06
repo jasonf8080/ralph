@@ -12,9 +12,6 @@
     grid-template-columns: 2.25fr 1fr;
 }
 
-.contact-desc{
-    display: none;
-}
 
 .white-bg{
     background: rgba(245, 245, 245, 0.6);
@@ -51,6 +48,10 @@
     width: 400px;
     height: auto;
     transform: translate(-150px, -20px);
+}
+
+.contact-desc2{
+    display: none;
 }
 
 .ralph-main-img{
