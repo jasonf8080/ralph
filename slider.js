@@ -5,6 +5,8 @@ const prevBtn = document.querySelector('.fas.fa-chevron-left');
 const sliderContainer = document.querySelector('.slider-container');
 let counter = JSON.parse(localStorage.getItem('overlayIndex'));
 const caseNameElement = document.querySelector('.case-name');
+const imgElement = document.querySelector('.slider-container img');
+
 
 
 //EVENT LISTENERS
@@ -20,7 +22,7 @@ prevBtn.addEventListener('click', prevImage);
 //FUNCTIONS
 
  function setupUI(){
-    sliderContainer.innerHTML = `<img src="case${counter}.png" alt="" class="slider-img">`;
+    imgElement.src = `case${counter}.png`;
     caseNameElement.textContent = cases[counter - 1].title;
 } 
    
