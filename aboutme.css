@@ -1,0 +1,262 @@
+:root{
+    --primary-color: #264249;
+    --secondary-color: #2CCDA8;
+    --text-color: #707070;
+}
+
+.about-me-header{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.25fr 1fr;
+}
+
+.contact-desc{
+    display: none;
+}
+
+.white-bg{
+    background: rgba(245, 245, 245, 0.6);
+    padding: 70px 100px;
+}
+
+.white-bg-top{
+    margin-bottom: 70px;
+}
+
+.white-bg .btn{
+    background: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    color: white;
+}
+
+.desc{
+    font-weight: bold;
+    color: var(--primary-color);
+    max-width: 50%;
+    margin-top: 30px;
+    font-size: 18px;
+}
+.transparent-bg{
+   background: linear-gradient(to right bottom, rgba(219, 219, 219, 0.5), rgba(115, 155, 155, 0.5));
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.image-container{
+    position: relative;
+    width: 400px;
+    height: auto;
+    transform: translate(-150px, -20px);
+}
+
+.ralph-main-img{
+    height: 100%;
+    width: 100%;
+}
+
+.ny-img{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    left: -70px;
+    bottom: -50px;
+}
+
+/*about section */
+
+.about-section{
+    max-width: 100% !important;
+    padding: 70px 0;
+    background: linear-gradient(to bottom right, #fff 0%, var(--primary-color) 100%);
+}
+
+.about-section img{
+    border-radius: 12px;
+}
+
+.about-project{
+    margin: 50px 0;
+}
+
+.about-container{
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.about-container .title{
+    color: var(--primary-color);
+    margin-left: 0%;
+}
+
+.about-item p, .about-item .title, .my-bio{
+    padding-left: 100px;
+}
+
+.about-item p{
+    font-size: 30px;
+    color: #707070;
+}
+
+.about-heading{
+    font-size: 70px;
+    color: var(--primary-color);
+}
+
+.about-item img{
+    max-width: 100%;
+
+}
+
+.about-content{
+    color: #181818;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-gallery{
+   display: grid;
+   grid-template-columns: 1.6fr 1fr;
+   column-gap: 40px;
+} 
+
+.about-gallery > *{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0;
+}
+
+.about-gallery-images img:first-child{
+    margin-bottom: 30px;
+}
+
+.about-gallery-main img{
+    max-width: 100%;
+    min-width: 1fr;
+    height: auto;
+    display: block;
+    padding: 0;
+}
+
+.padding-right{
+    padding-right: 70px;
+}
+
+
+@media(max-width: 992px){
+    .about-me-header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .white-bg-top{
+        padding-top: 30px;
+    }
+
+    .about-me-header > *{
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 30px 7%;
+    }
+    
+    .main-heading{
+        font-size: 60px;
+    }
+
+    .contact-desc{
+        display: none;
+    }
+
+    .desc{
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .transparent-bg{
+        flex-direction: column;
+     }
+
+     .image-container{
+         transform: translate(0px, -100px);
+         width: 100%;
+    }
+        
+
+    .contact-desc2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-desc2 .desc{
+        color: var(--text-color);
+        font-weight: lighter;
+    }
+
+    .contact-desc2 .btn{
+        background: #1F7B84;
+        border: 3px solid #1F7B84;
+        color: white;
+    }
+
+    .about-container{
+       padding: 0 7%;
+    }
+
+}
+
+@media(max-width: 768px){
+
+}
+
+
+
+
+@media(max-width: 600px){
+
+    .ny-img{
+        width: 180px;
+        height: auto;
+        left: -20px;
+        bottom: -100px;
+    }
+
+    .about-section{
+        background: rgb(245, 244, 244);
+    }
+
+    .padding-right{
+        padding-right: 0px;
+    }
+
+    .about-item p, .about-item .title, .my-bio{
+        padding-left: 0px;
+    }
+
+    .about-content{
+        font-size: 18px;
+    }
+
+    .about-gallery{
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        column-gap: 20px;
+     } 
+     
+     .about-gallery > *{
+         max-width: 100%;
+         min-width: 100%;
+         padding: 0;
+     }
+     
+     .about-gallery-images img:first-child{
+         margin-bottom: 10px;
+     }
+}
