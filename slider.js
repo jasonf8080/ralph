@@ -6,10 +6,22 @@ const sliderContainer = document.querySelector('.slider-container');
 let counter = JSON.parse(localStorage.getItem('overlayIndex'));
 const caseNameElement = document.querySelector('.case-name');
 const imgElement = document.querySelector('.slider-container img');
+const menuBtn = document.querySelector('.toggle-button');
+const menu = document.querySelector('.links');
+const bars = [...document.querySelectorAll('.bar')];
 
 
 
 //EVENT LISTENERS
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+
+    bars.forEach((bar) => {
+        bar.classList.toggle('change');
+    })
+})
+
+
 window.addEventListener('DOMContentLoaded', () =>{
     setupUI();
 })
@@ -26,10 +38,6 @@ prevBtn.addEventListener('click', prevImage);
     caseNameElement.textContent = cases[counter - 1].title;
 } 
    
-   
-
-
-
 
 function nextImage(){
     counter++;
