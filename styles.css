@@ -679,6 +679,10 @@ a{
 }
 
 @media(max-width: 600px){
+
+    .header{
+        height: 80vh;
+    }
   
     .main-heading{
         font-size: 42px;
