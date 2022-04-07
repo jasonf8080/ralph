@@ -43,7 +43,7 @@ export const softwares = [
     },
     
     {
-        title: 'adobe xd.png',
+        title: 'adobe XD.png',
     },
    
     {
@@ -59,7 +59,7 @@ export const softwares = [
     },
    
     {
-        title: 'adobe cc.png',
+        title: 'adobe CC.png',
     },
    
     {
@@ -75,6 +75,6 @@ export const softwares = [
     },
    
     {
-        title: 'figma.png',
+        title: 'spline.png',
     },
 ]
