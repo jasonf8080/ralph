@@ -328,7 +328,7 @@ a{
     margin: 0 auto;
 }
 
-.socials
+
 
 .skills-list{
     display: flex;
@@ -387,6 +387,12 @@ a{
         min-height: 80vh;
         padding: 70px 7%;
         /*border: 3px solid greenyellow;*/
+    }
+
+    .header .socials{
+        position: absolute;
+        right: 7%;
+        top: 55%;
     }
 
     .header-content{
