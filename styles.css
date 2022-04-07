@@ -681,7 +681,7 @@ a{
 @media(max-width: 600px){
 
     .header{
-        height: 80vh;
+        height: 70vh;
         min-height: none;
     }
   
