@@ -682,6 +682,7 @@ a{
 
     .header{
         height: 80vh;
+        min-height: none;
     }
   
     .main-heading{

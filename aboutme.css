@@ -150,12 +150,6 @@
     padding-right: 70px;
 }
 
-@media(max-width: 1200px){
-    body{
-        border: 3px solid purple;
-    }
-}
-
 
 @media(max-width: 992px){
 
