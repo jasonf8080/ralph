@@ -158,9 +158,6 @@
 
 
 @media(max-width: 992px){
-    body{
-        border: 3px solid greenyellow;
-    }
 
     .about-me-header{
         width: 100%;
@@ -242,10 +239,6 @@
 }
 
 @media(max-width: 768px){
-    body{
-        border: 3px solid red;
-    }
-
 
     .ny-img{
         width: 180px;
@@ -286,13 +279,3 @@
 
 
 
-
-@media(max-width: 600px){
-
-    body{
-        border: 3px solid orange;
-    }
-
-
-    
-}
